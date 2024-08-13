@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Cliente
-from . models import Producto
+from .models import Producto
 
 # Create your views here.
 
@@ -9,5 +9,8 @@ def listar_clientes(request):
     return render(request, 'listar_clientes.html', {'clientes': clientes})
 
 def listar_productos(request):
-    Productos = Producto.objects.all()
-    return render(request, 'listar_productos.html',{'productos':Productos})
+    productos = Producto.objects.all()
+    return render(request, 'listar_productos.html', {'productos': productos})
+
+def inicio(request):
+    return render(request, 'inicio.html')
