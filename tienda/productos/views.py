@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Cliente
 from .models import Producto
-from .forsms import ProductoModelForm
+from .forms import ProductoModelForm
 
 # Create your views here.
 
